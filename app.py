@@ -68,7 +68,7 @@ st.title("Subnetwork Search App")
 st.write("Enter a term to search for in the network:")
 
 # Load the graph from the weighted edge list file
-file_path = "/Users/gsaxton/Dropbox/National-level Studies/test3.weighted.edgelist"  # Make sure this path is correct
+file_path = "relationships.weighted.edgelist"  # Make sure this path is correct
 G = load_graph_from_edgelist(file_path)
 
 
