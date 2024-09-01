@@ -24,7 +24,7 @@ def load_graph_from_edgelist(file_path):
 # Function to create edges_df from the graph
 def create_edges_df(G):
     edges_data = [(u, v, d['weight']) for u, v, d in G.edges(data=True)]
-    edges_df = pd.DataFrame(edges_data, columns=['Source', 'Target', 'Weight'])
+    edges_df = pd.DataFrame(edges_data, columns=['Source (IV)', 'Target (DV)', 'Weight'])
     edges_df = edges_df.sort_values('Weight', ascending=False)
     print(len(edges_df))
     return edges_df
