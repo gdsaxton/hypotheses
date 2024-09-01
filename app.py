@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # Function to read the edge list and create a graph
 def load_graph_from_edgelist(file_path):
     try:
-        G = nx.read_weighted_edgelist(file_path, delimiter=';', create_using=nx.Graph())
+        G = nx.read_weighted_edgelist(file_path, delimiter=';', create_using=nx.DiGraph())
         return G
     except Exception as e:
         st.error(f"Error loading graph: {e}")
