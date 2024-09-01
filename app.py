@@ -65,7 +65,7 @@ def create_subnetwork(G, search_term):
 
 # Streamlit app layout
 st.title("Subnetwork Search App")
-st.write("Enter a term to search for in the network:")
+#st.write("Enter a term to search for in the network:")
 
 # Load the graph from the weighted edge list file
 file_path = "relationships.weighted.edgelist"  # Make sure this path is correct
@@ -82,7 +82,7 @@ if G:
     st.dataframe(edges_df.head())
 
     # Input for the search term
-    search_term = st.text_input("Search Term", "")
+    search_term = st.text_input("Enter a term to search for in the network:", "")
 
     # Button to trigger the search
     if st.button("Search"):
